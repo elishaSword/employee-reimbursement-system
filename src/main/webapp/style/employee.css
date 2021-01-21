@@ -1,0 +1,32 @@
+nav ul {
+	list-style-type: none;
+	padding-inline-start: 0;
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+#ticketStatusContainer,
+#ticketShowerStatusContainer {
+	margin-top: 2.56rem;
+	text-align: center;
+}
+
+#outputContainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.ticket {
+	border: double 4px var(--gray);
+	padding: 1.28rem;
+	margin: 1.28rem;
+	flex-grow: 1;
+	flex-basis: 0;
+}
+
+.negater {
+	background: var(--red);
+}

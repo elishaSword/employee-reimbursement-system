@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ERS - manager dashboard</title>
+	
+	<link rel="stylesheet" href="/Project1/style/bootstrap.css" />
+	<link rel="stylesheet" href="/Project1/style/user-form.css" />
+	<link rel="stylesheet" href="/Project1/style/employee.css" />
+	<link rel="stylesheet" href="/Project1/style/manager.css" />
+</head>
+<body>
+	<header class="container">
+		
+	</header>
+
+	<main class="container jumbotron hidden">
+		<h1>welcome, <span id="usernamePlaceholder">manager</span></h1>
+
+		<nav class="container">
+			<ul>
+				<li><a href="/Project1/api/logout"><button class="btn btn-info negater">logout</button></a></li>
+			</ul>
+		</nav>
+
+		<form id="createTicket" class="container" method="POST" action="/Project1/api/ticket">
+			<h3>create new reimbursement ticket</h3>
+			<input type="hidden" name="id" value="-1" />
+			<input type="hidden" name="status" value="TODO" />
+			<input type="hidden" name="employeeUsername" id="employeeUsername" />
+			<select name="type" required="" class="form-control">
+				<option value="">[select a reimbursement type]</option>
+				<option value="food">food</option>
+				<option value="lodging">lodging</option>
+				<option value="travel">travel</option>
+				<option value="other">other</option>
+			</select>
+			<textarea name="description" placeholder="description" class="form-control" />
+			<input type="number" name="price" placeholder="price" class="form-control" />
+			<input type="date" name="timestamp" class="form-control" />
+			<button id="ticketSubmitter" class="form-control btn btn-info">submit new ticket</button>
+			<div id="ticketStatusContainer" class="hidden" />
+		</form>
+
+		<form class="container">
+			<h3>show your previously submitted tickets</h3>
+			<button id="ticketShower" class="form-control btn btn-info">show</button>
+			<div id="ticketShowerStatusContainer" class="hidden" />
+		</form>
+
+		<form id="byStatus" class="container">
+			<h3>show any employee&#x2019;s tickets, by status</h3>
+			<select name="status" required="" class="form-control">
+				<option value="">[select a status type]</option>
+				<option value="TODO">TODO</option>
+				<option value="ACCEPTED">APPROVE</option>
+				<option value="REJECTED">DENY</option>
+			</select>
+			<button id="ticketShowerByStatus" class="form-control btn btn-info">show</button>
+			<div id="ticketShowerByStatusStatusContainer" class="hidden" />
+		</form>
+	</main>
+	
+	<div class="container" id="outputContainer" />
+	
+	<script src="/Project1/script/employee.js" />
+	<script src="/Project1/script/manager.js" />
+</body>
+</html>

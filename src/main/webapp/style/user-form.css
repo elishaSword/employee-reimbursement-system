@@ -1,0 +1,17 @@
+main {
+	max-width: 64ch;
+	margin: 2.56rem auto;
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+form {
+	padding-top: 2.56rem;
+	padding-bottom: 2.56rem;
+}
+
+.form-control {
+	margin: 0.64rem 0;
+}

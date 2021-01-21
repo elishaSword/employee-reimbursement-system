@@ -1,0 +1,8 @@
+#ticketShowerByStatusStatusContainer {
+	margin-top: 2.56rem;
+	text-align: center;
+}
+
+#ticketShowerByStatus {
+	background: var(--teal);
+}

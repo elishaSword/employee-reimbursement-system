@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ERS - welcome</title>
+	
+	<link rel="stylesheet" href="/Project1/style/bootstrap.css" />
+	<style>main {
+	max-width: 64ch;
+	margin: 2.56rem auto;
+}
+
+nav ul {
+	list-style-type: none;
+	padding-inline-start: 0;
+	text-align: center;
+}
+
+main h1 {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<main class="container jumbotron">
+		<h1>Employee Reimbursement System</h1>
+		<nav class="container">
+			<ul>
+				<li><a href="/Project1/api/login">login</a></li>
+				<li><a href="/Project/api/register">register new user</a></li>
+			</ul>
+		</nav>
+	</main>
+</body>
+</html>

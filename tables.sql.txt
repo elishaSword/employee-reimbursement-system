@@ -1,0 +1,45 @@
+create table ers_employee (
+	username
+		varchar(64)
+		primary key,
+	password
+		varchar(64)
+		not null,
+	privilege
+		int
+		not null
+		check (privilege >= 0 and privilege <= 1)
+);
+
+create table ers_ticket (
+	id
+		serial
+		primary key,
+	creation_time
+		timestamp
+		not null,
+	employee_username
+		varchar(64)
+		references ers_employee (username)
+		on delete cascade
+		on update cascade,
+	expense_type
+		int
+		not null
+		check (expense_type >= 0 and expense_type <= 3),
+	amount
+		int
+		not null
+		check (int > 0),
+	description
+		varchar(8192), -- really should be enough
+	status
+		int
+		not null
+		default 0
+		check (status >= 0 and status <= 2)
+);
+
+insert into ers_employee values
+	('deputy', 'password', 1),
+	('alex', 'password1', 0);

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ERS - welcome</title>
+	
+	<link rel="stylesheet" href="/Project1/style/bootstrap.css" />
+	<link rel="stylesheet" href="/Project1/style/user-form.css" />
+</head>
+<body>
+	<main class="container jumbotron">
+		<form class="container" method="POST" action="/Project1/api/register">
+			<h1>register new user</h1>
+			<input type="text" name="username" placeholder="username" class="form-control" />
+			<input type="password" name="unhashedPassword" placeholder="password" class="form-control" />
+			<input type="submit" class="form-control btn btn-info" value="register" />
+		</form>
+	</main>
+</body>
+</html>

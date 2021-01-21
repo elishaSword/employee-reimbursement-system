@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ERS - login</title>
+	
+	<link rel="stylesheet" href="/Project1/style/bootstrap.css" />
+	<link rel="stylesheet" href="/Project1/style/user-form.css" />
+	<style>nav ul {
+	list-style-type: none;
+	padding-inline-start: 0;
+	text-align: center;
+}</style>
+</head>
+<body>
+	<main class="container jumbotron">
+		<form class="container" method="POST" action="/Project1/api/login">
+			<h1>login</h1>
+			<input type="text" name="username" placeholder="username" class="form-control" />
+			<input type="password" name="unhashedPassword" placeholder="password" class="form-control" />
+			<input type="submit" class="form-control btn btn-info" value="log in" />
+		</form>
+		<nav class="container">
+			<ul>
+				<li><a href="/Project1/api/register">register new account</a></li>
+			</ul>
+		</nav>
+	</main>
+</body>
+</html>
